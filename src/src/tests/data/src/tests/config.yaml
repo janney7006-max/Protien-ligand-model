@@ -1,0 +1,28 @@
+# Protein-Ligand Model Configuration
+
+# Data Settings
+data:
+  pdb_path: "data/proteins/"
+  ligand_path: "data/ligands/"
+  output_path: "data/processed/"
+
+# Model Settings
+model:
+  type: "RandomForest"
+  n_estimators: 100
+  max_depth: 20
+  random_state: 42
+
+# Training Settings
+training:
+  train_split: 0.8
+  test_split: 0.2
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.001
+
+# Feature Extraction
+features:
+  extract_amino_acids: true
+  extract_geometry: true
+  extract_chemical_properties: true
